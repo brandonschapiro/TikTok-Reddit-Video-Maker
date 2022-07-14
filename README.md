@@ -1,5 +1,5 @@
 # TikTok-Reddit-Video-Maker
-TikTok-Reddit-Video-Maker is a program that allows for the fast creation of Reddit post videos. [Example (not from program)](https://drive.google.com/file/d/1kTiszkrgCUG79NPJkZ4fyuMjUfocPST5/view?usp=sharing).
+TikTok-Reddit-Video-Maker is a program that allows for the fast creation of Reddit post videos. [Example (not from program)](https://www.youtube.com/watch?v=WMld-HUEIcM).
 
 The creation of these videos follow the same process everytime.
 
@@ -15,7 +15,7 @@ created in just a couple minutes!
 However, instead of taking screenshots, this program takes in 
 the text from the post / comments and generates its own image. This is why the videos created look slightly different.
 
-[Example from the program.](https://drive.google.com/file/d/1jWFKt1zExwBWicJNOsxYAUv6-a3OFTDg/view?usp=sharing)
+[Example from the program.](https://www.youtube.com/shorts/bzE6PqjnR1U)
 
 **Technologies Used**
 
