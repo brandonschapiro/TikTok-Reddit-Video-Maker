@@ -1,0 +1,10 @@
+__pycache__/ImageCreator.cpython-39.pyc
+__pycache__/RedditScraper.cpython-39.pyc
+__pycache__/TextParser.cpython-39.pyc
+__pycache__/TextToSpeech.cpython-39.pyc
+__pycache__/VideoCreator.cpython-39.pyc
+*.png
+*.mp3
+*.mp4
+*.jpg
+*.ttf
