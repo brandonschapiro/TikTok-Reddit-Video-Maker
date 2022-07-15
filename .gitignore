@@ -8,3 +8,5 @@ __pycache__/VideoCreator.cpython-39.pyc
 *.mp4
 *.jpg
 *.ttf
+*.cmd
+playground.py

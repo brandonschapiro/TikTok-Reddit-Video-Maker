@@ -2,7 +2,7 @@ import praw
 class Scraper:
     def __init__(self):
         #Enter API info
-        self.reddit = praw.Reddit(client_id='',client_secret='',username='',password='',user_agent='')
+        self.reddit = praw.Reddit()
     
     #Gets 'hot' posts of a subreddit, can specify how many posts you want to retrieve
     def getHotPosts(self, subredditName, limit=25):

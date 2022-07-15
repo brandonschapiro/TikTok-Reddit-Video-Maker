@@ -11,6 +11,13 @@ def createTikTok(imageDirs, audioDirs, tikTokDir):
         for i in range(len(imageDirs)):
             image = ImageClip(imageDirs[i]).set_start(videoDuration)
             audio = AudioFileClip(audioDirs[i]).set_start(videoDuration)
+            #Clip end of audio if next audio clip is part of the same comment / post. Makes reading comments with multiple fragments less choppy
+            if(i + 1 == len(imageDirs)):
+                hasAnotherSection = False
+            else:
+                hasAnotherSection = not audioDirs[i+1].endswith('1.mp3')
+            if(hasAnotherSection):
+                audio = audio.subclip(0,-0.7)
             image = image.set_duration(audio.duration).set_audio(audio).set_position(('center', 330))
             videoDuration = videoDuration + audio.duration
             imageList.append(image)

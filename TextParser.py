@@ -24,6 +24,7 @@ def addLineBreaks(text, LINE_LIMIT)->str:
 #Fragments text into sections so that smaller images can be displayed on screen. Ex. A 20 line image would take up too much of the screen so the text is fragmented into 5 line sections.
 #The fragmented text is used for both creating images and the audio files.
 def fragmentText(text)->list():
+    text = cleanTextBeforeFragmenting(text)
     #Removes non unicode characters and adds linebreaks to the text
     text = unidecode(text)
     text = addLineBreaks(text, COMMENT_LINE_LIMIT)
@@ -46,3 +47,9 @@ def fragmentText(text)->list():
     if(currentString != ''):
         listOfFragments.append(currentString)
     return listOfFragments
+
+#Cleans up text so that text is displayed cleaner and audio is less choppy.
+def cleanTextBeforeFragmenting(text):
+    text = text.replace('\n',' ')
+    text = text.replace('  ', ' ')
+    return text

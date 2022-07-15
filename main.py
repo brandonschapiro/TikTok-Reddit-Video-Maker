@@ -4,6 +4,7 @@ import TextToSpeech
 import VideoCreator
 
 #Main method allows user to create a video by entering the posts URL, selecting whether you want the comments or body of the post, and then selecting which comments you want to include in the video (if needed)
+
 def main():
     scraper = Scraper()
     val = 1
@@ -12,7 +13,7 @@ def main():
         url = str(input('Enter url of post you would like to create a video of: '))
         post = scraper.getPostByURL(url)
         typeOfVideo = int(input('Get comments of post [0] or get the body of post [1]? '))
-        commentsForVideo = list()
+        commentsForVideo = []
         if(typeOfVideo == 0):
             typeOfComments = int(input('Get best [0] or top [1] comments? '))
             if(typeOfComments == 0):
@@ -32,7 +33,7 @@ def main():
                 inp = int(input())
                 if(inp < len(comments) or inp < 0):
                     commentsForVideo.append(comments[inp])
-                    estimatedDuration = estimatedDuration + TextToSpeech.estimateAudioLength(comments[inp].body)
+                    estimatedDuration = estimatedDuration + TextToSpeech.estimateAudioLength(str(comments[inp].body))
                     print('Comment added! Estimated video duration',estimatedDuration)
                 else:
                     print('Number out of range')

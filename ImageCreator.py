@@ -47,7 +47,7 @@ def createCommentImageWithAuthor(text, author, saveDir):
 #Creates comment images with just the text from the comment. Used for all fragments after the first as well as for the body text of a post. Text must have linebreaks added to it beforehand.
 def createContinuedCommentImage(text, saveDir):
     numLines = 1 + text.count('\n')
-    imageToSave = Image.new('RGBA', [406, 12 + 18*numLines], color=(0,0,0,127))
+    imageToSave = Image.new('RGBA', [406, 15 + 18*numLines], color=(0,0,0,127))
     d = ImageDraw.Draw(imageToSave)
     d.text([5,5],text,font=COMMENT_BODY_FONT, fill=(255,255,255))
     imageToSave.save(saveDir)
