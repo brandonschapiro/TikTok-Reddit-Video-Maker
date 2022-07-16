@@ -24,8 +24,12 @@ def createTikTok(imageDirs, audioDirs, tikTokDir):
         #Gets random background video and clips a random section of that video
         bgDir = 'assets/backgroundVideos/' + random.choice(os.listdir('assets/backgroundVideos'))
         backgroundVideo = VideoFileClip(bgDir).without_audio()
-        startTime = random.randint(0,int(backgroundVideo.duration-videoDuration-5))
+        startTime = random.randint(15,int(backgroundVideo.duration-videoDuration-5))
         backgroundVideo = backgroundVideo.subclip(startTime, startTime + videoDuration + 1)
+        #Adds ending image telling user to like and follow
+        endingImage = ImageClip('assets/endingImage.png')
+        endingImage = endingImage.set_duration(3).set_start(backgroundVideo.duration-3).set_position(('center', 600)).crossfadein(1.5)
+        imageList.append(endingImage)
         #Adds background video to list of images, combines them all into one clip, and saves the video.
         imageList.insert(0, backgroundVideo)
         video = CompositeVideoClip(imageList)
