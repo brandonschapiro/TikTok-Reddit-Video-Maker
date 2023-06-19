@@ -15,7 +15,7 @@ created in just a couple minutes!
 However, instead of taking screenshots, this program takes in 
 the text from the post / comments and generates its own image. This is why the videos created look slightly different.
 
-[Example from the program.](https://www.youtube.com/shorts/bzE6PqjnR1U)
+[Example from the program.](https://www.youtube.com/shorts/bzE6PqjnR1U) (outdated video - has been improved since then)
 
 **Technologies Used**
 
